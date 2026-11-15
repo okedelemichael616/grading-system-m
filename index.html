@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GRADE SCORE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>GRADE<span>SCORE</span></h1>
+
+        <p>Smart Academic Grading System</p>
+
+        <div class="box">
+<!-- 
+            <h4>Check Your Grade</h4>
+
+
+            <p>Enter your score below to know your grade.</p> -->
+
+            <h2 id="level">Secondary School</h2>
+
+
+
+            <label>Student Name</label>
+
+            <input type="text" id="studentName" placeholder="Enter your name">
+
+            <label>Enter Your Score</label>
+
+            <input type="number" id="score" placeholder="Enter score">
+
+            <button onclick="checkGrade()">
+                Check Grade
+            </button>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <div class="box">
+
+        <h2 id="uniLevel">University</h2>
+
+        <label>Student Name</label>
+        <input type="text" id="uniStudentName" placeholder="Enter your name">
+
+        <label>Enter Your Score</label>
+        <input type="number" id="uniScore" placeholder="Enter score">
+
+        <button onclick="checkUniversityGrade()">
+            Check Grade
+        </button>
+
+        <div id="uniResult"></div>
+
+    </div>
+
+    <div class="polytechnic">
+        <h2 id="polyLevel">Polytechnic Grading System</h2>
+
+        <label>Student Name</label>
+        <input type="text" id="polyStudentName" placeholder="Enter your name">
+
+
+        <label>Enter Your Score</label>
+        <input type="number" id="polyScore" placeholder="Enter your score">
+
+        <button onclick="calculatePolytechnic()">
+            Check Grade
+        </button>
+
+        <div id="polyResult"></div>
+        
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

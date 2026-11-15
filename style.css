@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    background:
+        radial-gradient(ellipse at 12% 8%, rgba(80, 120, 255, 0.18), transparent 34rem),
+        linear-gradient(135deg, #f3f6ff, #eef8f7);
+    color: #17233c;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+    width: min(100%, 560px);
+    text-align: center;
+}
+
+.container + .box,
+.polytechnic {
+    width: min(100%, 560px);
+}
+
+h1 {
+    margin: 0;
+    color: #17233c;
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.07em;
+}
+
+h1 span {
+    color: #4968e8;
+}
+
+.container > p {
+    margin: 10px 0 28px;
+    color: #66728a;
+    font-size: 1rem;
+}
+
+.box {
+    padding: clamp(24px, 6vw, 38px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 24px 60px rgba(34, 54, 105, 0.12);
+    text-align: left;
+}
+
+.container + .box {
+    position: relative;
+    border-top: 4px solid #7656d6;
+}
+
+.container + .box::before,
+.polytechnic::before {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+}
+
+.container + .box::before {
+    content: "UNIVERSITY";
+    background: #f0ebff;
+    color: #6243bd;
+}
+
+.polytechnic {
+    padding: clamp(24px, 6vw, 38px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-top: 4px solid #168b7b;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 24px 60px rgba(34, 54, 105, 0.12);
+    text-align: left;
+}
+
+.polytechnic::before {
+    content: "POLYTECHNIC";
+    background: #e6f7f3;
+    color: #117466;
+}
+
+.box h2,
+.box h4,
+.polytechnic h2 {
+    margin: 0 0 8px;
+    color: #17233c;
+    font-size: 1.55rem;
+    letter-spacing: -0.035em;
+}
+
+.box > p {
+    margin: 0 0 26px;
+    color: #6b7890;
+    line-height: 1.5;
+}
+
+.polytechnic h2 {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #33415d;
+    font-size: 0.92rem;
+    font-weight: 650;
+}
+
+select,
+input {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    border: 1px solid #d9e0ed;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fbfcff;
+    color: #1c2943;
+    font: inherit;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+select {
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #9aa5b7;
+}
+
+select:focus,
+input:focus {
+    border-color: #5874ed;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(88, 116, 237, 0.14);
+}
+
+.container + .box input:focus {
+    border-color: #7656d6;
+    box-shadow: 0 0 0 4px rgba(118, 86, 214, 0.14);
+}
+
+.polytechnic input:focus {
+    border-color: #168b7b;
+    box-shadow: 0 0 0 4px rgba(22, 139, 123, 0.14);
+}
+
+button {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 24px;
+    padding: 13px 18px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #5874ed, #4058d5);
+    box-shadow: 0 9px 18px rgba(70, 94, 218, 0.2);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(70, 94, 218, 0.27);
+    filter: brightness(1.04);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(88, 116, 237, 0.35);
+    outline-offset: 3px;
+}
+
+.container + .box button {
+    background: linear-gradient(135deg, #8062df, #6243bd);
+    box-shadow: 0 9px 18px rgba(98, 67, 189, 0.2);
+}
+
+.container + .box button:hover {
+    box-shadow: 0 12px 22px rgba(98, 67, 189, 0.27);
+}
+
+.polytechnic button {
+    background: linear-gradient(135deg, #1ba28f, #117466);
+    box-shadow: 0 9px 18px rgba(17, 116, 102, 0.2);
+}
+
+.polytechnic button:hover {
+    box-shadow: 0 12px 22px rgba(17, 116, 102, 0.27);
+}
+
+#result,
+#uniResult,
+#polyResult {
+    min-height: 0;
+    margin-top: 18px;
+    padding: 0;
+    border-radius: 10px;
+    color: #33415d;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+#result:not(:empty),
+#uniResult:not(:empty),
+#polyResult:not(:empty) {
+    padding: 15px 16px;
+    border: 1px solid #dce5ff;
+    background: #f4f7ff;
+}
+
+.container + .box #uniResult:not(:empty) {
+    border-color: #e3dcff;
+    background: #f7f4ff;
+}
+
+.polytechnic #polyResult:not(:empty) {
+    border-color: #ccebe4;
+    background: #f0faf7;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 28px 16px;
+    }
+
+    .container > p {
+        margin-bottom: 22px;
+    }
+
+    .box {
+        border-radius: 17px;
+    }
+
+    .polytechnic {
+        border-radius: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .container {
+        display: contents;
+    }
+
+    h1 {
+        order: -2;
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .container > p {
+        order: -1;
+        flex: 0 0 100%;
+        margin: 0 0 4px;
+        text-align: center;
+    }
+
+    .container > .box,
+    .container + .box,
+    .polytechnic {
+        width: auto;
+        min-width: 0;
+        max-width: 400px;
+        flex: 1 1 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
