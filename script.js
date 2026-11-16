@@ -81,7 +81,7 @@ function checkGrade() {
     else if (score >= 0 && score <= 39) {
         result.innerHTML = "Student: " + name +
             "<br>Level: " + school +
-            "<br>Grade: c4";
+            "<br>Grade: F9"
     }
 }
 
